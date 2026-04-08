@@ -34,7 +34,13 @@ body {
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 0 1.5rem; 
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 4rem;
+  }
 }
 
 .header {
@@ -54,7 +60,13 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
-  padding: 0 120px; 
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .nav-container {
+    padding: 0 4rem;
+  }
 }
 
 .logo {
@@ -170,7 +182,24 @@ body {
   border: 1px solid var(--border-color);
 }
 
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.grid-2 { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 4rem; 
+}
+
+@media (max-width: 992px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+}
 
 .project-card {
   background-color: var(--bg-card);
@@ -228,8 +257,3 @@ body {
 .footer { padding: 4rem 0; border-top: 1px solid var(--border-color); }
 .footer-content { display: flex; justify-content: space-between; color: var(--text-muted); }
 
-@media (max-width: 768px) {
-  .nav-container {
-    padding: 0 20px; /* Reduz o espaço em celulares */
-  }
-}
