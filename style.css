@@ -25,6 +25,9 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .logo{
@@ -107,9 +110,17 @@ body {
   background-color: var(--primary-color);
 }
 
+#main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .view {
   display: none;
   opacity: 0;
+  flex: 1;
+  width: 100%;
 }
 
 .view.active {
@@ -233,11 +244,22 @@ body {
 
 .btn-text { color: var(--primary-color); text-decoration: none; margin-right: 1rem; font-weight: 600; }
 
+.resume-container {
+    height: 100%;
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
 .resume-paper {
-  background-color: var(--bg-card);
-  padding: 3rem;
-  border-radius: 1rem;
-  border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .resume-header {
